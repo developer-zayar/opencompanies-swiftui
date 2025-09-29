@@ -2,7 +2,7 @@
 //  AppConfig.swift
 //  GitHubUsers
 //
-//  Created by Zay Yar Phyo on 01/09/2025.
+//  Created by Zay Yar Phyo on 25/09/2025.
 //
 
 import Foundation
@@ -10,6 +10,10 @@ import Foundation
 enum AppConfig {
     static var baseUrl: String {
         return configuration(key: .baseUrl)
+    }
+
+    static var apiKey: String {
+        return configuration(key: .apiKey)
     }
 
     private static func configuration(key: Plist) -> String {

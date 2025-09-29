@@ -1,3 +1,12 @@
+//
+//  SearchResultRow.swift
+//  OpenCompanies
+//
+//  Created by Zay Yar Phyo on 28/09/2025.
+//
+
+import SwiftUI
+
 struct SearchResultRow: View {
     let companyId: CompanyId
     

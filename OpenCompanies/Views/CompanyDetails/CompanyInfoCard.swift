@@ -1,19 +1,33 @@
+//
+//  CompanyInfoCard.swift
+//  OpenCompanies
+//
+//  Created by Zay Yar Phyo on 27/09/2025.
+//
+
+import SwiftUI
+
 struct CompanyInfoCard: View {
     let company: Company
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Basic Information")
-                .font(.headline)
-                .padding(.bottom, 4)
+            HStack {
+                Image(systemName: "info.circle.fill")
+                    .foregroundColor(.blue)
+                Text("Company Info")
+                    .font(.headline)
+            }
+            Divider()
             InfoRow(label: "Tax Code", value: company.taxCode)
             InfoRow(label: "VAT Code", value: company.vatCode)
             InfoRow(label: "Registration Date", value: company.registrationDate)
             InfoRow(label: "SDI Code", value: company.sdiCode)
         }
         .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(.systemBackground))
         .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
+        .shadow(radius: 1)
     }
 }

@@ -45,43 +45,7 @@ struct ContentView: View {
                 .padding(.horizontal)
 
                 // Results List
-                Group {
-                    if viewModel.isLoading {
-                        ProgressView("Searching...")
-                            .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-                            .padding()
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    } else if viewModel.companyIds.isEmpty {
-                        VStack(spacing: 8) {
-                            Image(systemName: "doc.text.magnifyingglass")
-                                .font(.system(size: 40))
-                                .foregroundColor(.gray)
-                            Text("No results found")
-                                .foregroundColor(.gray)
-                                .font(.callout)
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    } else {
-                        List(viewModel.companyIds) { companyId in
-                            NavigationLink(destination: CompanyDetailsView(companyId: companyId.id ?? "0")) {
-                                HStack(spacing: 12) {
-                                    Image(systemName: "number.circle.fill")
-                                        .foregroundColor(.blue)
-                                        .font(.title3)
-                                    VStack(alignment: .leading, spacing: 4) {
-                                        Text("Company ID")
-                                            .font(.caption)
-                                            .foregroundColor(.gray)
-                                        Text(companyId.id ?? "Unknown")
-                                            .font(.body)
-                                            .fontWeight(.medium)
-                                    }
-                                }
-                                .padding(.vertical, 6)
-                            }
-                        }
-                    }
-                }
+                SearchResultsView(viewModel: viewModel)
             }
             .navigationTitle("Company Search")
         }

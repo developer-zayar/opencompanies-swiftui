@@ -1,13 +1,19 @@
+//
+//  SearchResultsView.swift
+//  OpenCompanies
+//
+//  Created by Zay Yar Phyo on 28/09/2025.
+//
+
+import SwiftUI
+
 struct SearchResultsView: View {
-    @ObservedObject var viewModel: CompanySearchViewModel
-    
+    @ObservedObject var viewModel: CompanyViewModel
+
     var body: some View {
         Group {
             if viewModel.isLoading {
-                ProgressView("Searching...")
-                    .progressViewStyle(CircularProgressViewStyle(tint: .blue))
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                LoadingView(message: "Searching...")
             } else if viewModel.companyIds.isEmpty {
                 VStack(spacing: 8) {
                     Image(systemName: "doc.text.magnifyingglass")

@@ -1,3 +1,12 @@
+//
+//  CompanyHeaderView.swift
+//  OpenCompanies
+//
+//  Created by Zay Yar Phyo on 27/09/2025.
+//
+
+import SwiftUI
+
 struct CompanyHeaderView: View {
     let company: Company
 
@@ -18,6 +27,7 @@ struct CompanyHeaderView: View {
             }
         }
         .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(.systemGray6))
         .cornerRadius(12)
     }

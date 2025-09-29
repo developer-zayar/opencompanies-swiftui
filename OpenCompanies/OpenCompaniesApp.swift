@@ -2,7 +2,7 @@
 //  OpenCompaniesApp.swift
 //  OpenCompanies
 //
-//  Created by Zay Yar Phyo on 27/09/2025.
+//  Created by Zay Yar Phyo on 21/09/2025.
 //
 
 import SwiftUI
