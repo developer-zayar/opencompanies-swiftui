@@ -13,10 +13,9 @@ The project also demonstrates **environment-based configuration** (Staging, Prod
 - ⚙️ **Environment Configuration**: Easily switch between Staging, and Production API endpoints.
 
 ## 🛠️ Tech Stack
-
-SwiftUI – UI layer
-MVVM – Architectural pattern
-ObservableObject – State management
-Async/Await – Modern concurrency
-URLSession – Networking
-OpenAPI – Public API for company data
+- SwiftUI – UI layer
+- MVVM – Architectural pattern
+- ObservableObject – State management
+- Async/Await – Modern concurrency
+- URLSession – Networking
+- OpenAPI – Public API for company data
